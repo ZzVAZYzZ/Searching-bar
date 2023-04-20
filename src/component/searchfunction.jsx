@@ -38,22 +38,47 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function SearchBar({ onSearch }) {
-  const [inputValue, setInputValue] = useState('');
-  const [data,setData] = useState('');
-
-useEffect(() => {
-    axios.get('https://raw.githubusercontent.com/ZzVAZYzZ/My_Quiz/main/JSON/myQuiz1.json?token=GHSAT0AAAAAACBJVBWZYSL5RXC3LWGCBWHOZCA3I5Q')
-      .then(response => setData(response.data))
-      .catch(error => console.error(error));
-  }, []);
-
-console.log(data);
-
-  return (
-    <div>
-      <input type="text" />
-    </div>
+function SearchBar() {
+    const [data,setData] = useState('');
+    const [input,setInput] = useState('');
+    const [state,setState] = useState('');
+    const [show,setShow] = useState('');
+    
+    function handleChange(e){
+        setInput(e.target.value)
+    }
+    useEffect(() => {
+        axios.get('https://raw.githubusercontent.com/ZzVAZYzZ/Searching-bar/main/src/mydata.json')
+        .then(response => setData(response.data))
+        .catch(error => console.error(error));
+    }, []);
+    function handleChange(e){
+        setInput(e.target.value);
+    }
+    function handleData(){
+  
+        if(input === data[0].Name){
+            setState('Đã tìm thấy dữ liệu');
+        }else setState('Không tìm thấy dữ liệu');
+    }
+   
+    function handleClick(){
+        handleData();
+        setShow(state);
+    }
+    return (
+        <div>
+        <input 
+            type="text"
+            onChange={handleChange}
+        />
+        <button
+            onClick={handleClick}
+        >
+            Search
+        </button>
+        <p>{show}</p>
+        </div>
   );
 }
 
