@@ -54,7 +54,7 @@ function SearchBar() {
         </button>
         <p>{show}</p>
         </div>
-  );
+    );
 }
 
 export default  SearchBar;
