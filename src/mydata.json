@@ -1,22 +1,18 @@
 [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": "john.doe@example.com"
+      "Name" : "chickend",
+      "price" : 2000
     },
     {
-      "id": 2,
-      "name": "Jane Doe",
-      "email": "jane.doe@example.com"
+      "Name" : "steak",
+      "price" : 5000
     },
     {
-      "id": 3,
-      "name": "Bob Smith",
-      "email": "bob.smith@example.com"
+      "Name" : "fish",
+      "price" : 1500
     },
     {
-      "id": 4,
-      "name": "Alice Brown",
-      "email": "alice.brown@example.com"
+      "Name" : "pizza",
+      "price" : 1000
     }
 ]
