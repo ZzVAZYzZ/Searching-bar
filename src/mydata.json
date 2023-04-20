@@ -4,15 +4,31 @@
       "price" : 2000
     },
     {
-      "Name" : "steak",
+      "Name" : "cow",
       "price" : 5000
     },
     {
-      "Name" : "fish",
+      "Name" : "dog",
       "price" : 1500
     },
     {
-      "Name" : "pizza",
+      "Name" : "cat",
       "price" : 1000
+    },
+    {
+      "Name" : "elephant",
+      "price" : 10000
+    },
+    {
+      "Name" : "bird",
+      "price" : 220
+    },
+    {
+      "Name" : "tiger",
+      "price" : 8000
+    },
+    {
+      "Name" : "snake",
+      "price" : 3020
     }
 ]

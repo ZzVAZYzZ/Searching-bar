@@ -1,39 +1,4 @@
-// import React,{useState,useEffect} from "react";
-// import axios from 'axios';
 
-
-// function SearchBar({myplaceholder,label}){
-
-//     const [inputValue,setInputValue] = useState('');
-//     const [data,setData] = useState('');
-
-
-//     useEffect(() => {
-//         axios.get('https://raw.githubusercontent.com/ZzVAZYzZ/My_Quiz/main/JSON/myQuiz1.json?token=GHSAT0AAAAAACBJVBWZ6R4HLBODRG7R22I4ZCA25TQ')
-//           .then(response => setData(response.data))
-//           .catch(error => console.error(error));
-//       }, []);
-
-//     console.log(data);
-
-//     function handleChange(e){
-//         setInputValue(e.target.value);
-//     }
-
-//     return(
-//         <>
-//             <label>{label}</label>
-//             <input type="text"
-//                 placeholder = {myplaceholder}
-//                 onChange={handleChange}
-//             />
-//             <p>{inputValue}</p>
-//         </>
-        
-//     )
-// }
-
-// CHATGPT
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -56,10 +21,20 @@ function SearchBar() {
         setInput(e.target.value);
     }
     function handleData(){
-  
-        if(input === data[0].Name){
-            setState('Đã tìm thấy dữ liệu');
-        }else setState('Không tìm thấy dữ liệu');
+        let a = false;
+        let b = 0;
+        for(let i=0;i<data.length;i++){
+            if(input === data[i].Name){
+                a = true;
+                b = i;
+            }
+            if(a){
+                setState(`Name: ${data[b].Name} - Price: ${data[b].price}`);
+            }else{
+                setState('Không tìm ra dữ liệu');
+            }
+        }
+
     }
    
     function handleClick(){
