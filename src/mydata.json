@@ -1,11 +1,12 @@
-[
+{
+  "data" :[
     {
       "no" : 1,
       "name" : "Jack",
       "zoo" : "NEW YORK",
       "id" : "ny01a",
       "piece": "Elephant",
-      "age": "12 years "
+      "age": "12 years"
     },
     {
       "no" : 2,
@@ -21,7 +22,7 @@
       "zoo" : "NEW YORK",
       "id" : "ny06b",
       "piece": "Panda",
-      "age": "3 years "
+      "age": "3 years"
     },
     {
       "no" : 4,
@@ -29,6 +30,7 @@
       "zoo" : "BANGKOK",
       "id" : "bk03c",
       "piece": "Monkey",
-      "age": "2 months "
+      "age": "2 months"
     }
-]
+  ]
+}
