@@ -30,7 +30,7 @@ function SearchBar() {
                 b = i;
             }
             if(a){
-                setState(`Name: ${data[b].Name} - Price: ${data[b].price}`);
+                setState(`Name: ${data[b].Name} - Zoo: ${data[b].Zoo}`);
             }else{
                 setState('Không tìm ra dữ liệu');
             }

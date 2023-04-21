@@ -1,6 +1,6 @@
 [
     {
-      "No" : 1,
+      "no" : 1,
       "name" : "Jack",
       "zoo" : "NEW YORK",
       "id" : "ny01a",
@@ -8,25 +8,25 @@
       "age": "12 years "
     },
     {
-      "No" : 2,
-      "Name" : "Mie",
-      "Zoo" : "HA NOI",
+      "no" : 2,
+      "name" : "Mie",
+      "zoo" : "HA NOI",
       "id" : "hn03a",
       "piece": "Tiger",
       "age": "5 years "
     },
     {
-      "No" : 3,
-      "Name" : "Tiny",
-      "Zoo" : "NEW YORK",
+      "no" : 3,
+      "name" : "Tiny",
+      "zoo" : "NEW YORK",
       "id" : "ny06b",
       "piece": "Panda",
       "age": "3 years "
     },
     {
-      "No" : 4,
-      "Name" : "RANDY",
-      "Zoo" : "BANGKOK",
+      "no" : 4,
+      "name" : "RANDY",
+      "zoo" : "BANGKOK",
       "id" : "bk03c",
       "piece": "Monkey",
       "age": "2 months "
