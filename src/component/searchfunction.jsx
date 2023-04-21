@@ -1,7 +1,8 @@
 
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import MyTable from './searchchild.jsx/table';
+
 
 function SearchBar() {
     const [data,setData] = useState('');
@@ -43,16 +44,20 @@ function SearchBar() {
     }
     return (
         <div>
-        <input 
-            type="text"
-            onChange={handleChange}
-        />
-        <button
-            onClick={handleClick}
-        >
-            Search
-        </button>
-        <p>{show}</p>
+            <input 
+                type="text"
+                onChange={handleChange}
+            />
+            <button
+                onClick={handleClick}
+            >
+                Search
+            </button>
+            <p>{show}</p>
+            <br />  
+            <MyTable
+                data={data}
+            />
         </div>
     );
 }

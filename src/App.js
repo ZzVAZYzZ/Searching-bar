@@ -1,13 +1,10 @@
-import SearchBar from './component/searchfunction';
+import SearchBar from './component/searchfunction.jsx';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-        <SearchBar 
-          // label = 'Search your food: '
-          onSearch='123'
-        />
+        <SearchBar />
     </div>
   );
 }
