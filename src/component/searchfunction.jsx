@@ -10,6 +10,7 @@ function SearchBar() {
     const [state,setState] = useState('');
     const [show,setShow] = useState('');
     
+
     function handleChange(e){
         setInput(e.target.value)
     }
@@ -25,12 +26,12 @@ function SearchBar() {
         let a = false;
         let b = 0;
         for(let i=0;i<data.length;i++){
-            if(input === data[i].Name){
+            if(input === data[i].name){
                 a = true;
                 b = i;
             }
             if(a){
-                setState(`Name: ${data[b].Name} - Zoo: ${data[b].Zoo}`);
+                setState(`Name: ${data[b].name} - Zoo: ${data[b].zoo}`);
             }else{
                 setState('Không tìm ra dữ liệu');
             }

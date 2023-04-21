@@ -2,7 +2,6 @@ import { Table } from 'react-bootstrap';
 import React,{ useState } from 'react';
 
 function MyTable(data){
-    console.log(data)
     return(
         <Table striped bordered hover>
             <thead>
