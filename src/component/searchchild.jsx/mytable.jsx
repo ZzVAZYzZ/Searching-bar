@@ -1,70 +1,71 @@
 import { Table } from 'react-bootstrap';
-import React,{ useState , useEffect , useRef , useLayoutEffect} from 'react';
+import React,{ useState , useEffect , useRef , useLayoutEffect, useCallback} from 'react';
 
-function MyTable(props){
-    const {data} = props;
-    console.log(data)
-    const yData = [
-        {
-            no: '1',
-            name: 'Jack',
-            zoo: 'New York',
-            id: 'ny01a',
-            piece: 'Elephant',
-            age: '12 years'
-        },
-        {
-            no: '2',
-            name: 'Mie',
-            zoo: 'Ha Noi',
-            id: 'hn03a',
-            piece: 'Tiger',
-            age: '5 years'
-        },
-        {
-            no: '3',
-            name: 'Tiny',
-            zoo: 'New York',
-            id: 'ny06b',
-            piece: 'Panda',
-            age: '3 years'
-        },
-        {
-            no: '4',
-            name: 'Randy',
-            zoo: 'Bangkok',
-            id: 'bk03c',
-            piece: 'Monkey',
-            age: '2 months'
+function MyTable({data,dataSearch}) {
+    const [filteredData,setFilteredData] = useState({});
+    const [prevDataSearch, setPrevDataSearch] = useState("");
+
+    useEffect(() => {
+        if (prevDataSearch !== "" && dataSearch === "") {
+          setFilteredData({});
         }
-    ];
+        setPrevDataSearch(dataSearch);
+    }, [dataSearch]);
 
-    return(
-        <Table striped bordered hover>
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>Name</th>
-                    <th>Zoo</th>
-                    <th>ID</th>
-                    <th>PIECE</th>
-                    <th>AGE</th>
-                </tr>
-            </thead>
-            <tbody>
-                {yData.map((item)=>(
-                    <tr key={item.no}>
-                        <td>{item.no}</td>
-                        <td>{item.name}</td>
-                        <td>{item.zoo}</td>
-                        <td>{item.id}</td>
-                        <td>{item.piece}</td>
-                        <td>{item.age}</td>
-                    </tr>
-                ))}
-            </tbody>
-        </Table>
-    )
+    useEffect(()=>{
+        if (Array.isArray(data) && typeof dataSearch === 'string' && dataSearch !== ''){
+            const filteredItem = data.find((item) => item.name.toLowerCase().includes(dataSearch.toLowerCase()));
+            setFilteredData(filteredItem || {});
+        }else if(Array.isArray(data)){
+            setFilteredData({});
+        }
+    },[data,dataSearch])
+    console.log(filteredData)
+    return (
+        <>
+            {Array.isArray(data) && data.length > 0 && (
+                <Table striped bordered hover border="1px solid #333">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Name</th>
+                            <th>Zoo</th>
+                            <th>ID</th>
+                            <th>PIECE</th>
+                            <th>AGE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {dataSearch === '' ? (
+                    // Nếu không có giá trị tìm kiếm, hiển thị toàn bộ dữ liệu
+                        data.map((item) => (
+                            <tr key={item.no}>
+                                <td>{item.no}</td>
+                                <td>{item.name}</td>
+                                <td>{item.zoo}</td>
+                                <td>{item.id}</td>
+                                <td>{item.piece}</td>
+                                <td>{item.age}</td>
+                            </tr>
+                        ))
+                    ) : (
+                // Nếu có giá trị tìm kiếm, hiển thị các kết quả phù hợp
+
+                        <tr key={filteredData.no}>
+                            <td>{filteredData.no}</td>
+                            <td>{filteredData.name}</td>
+                            <td>{filteredData.zoo}</td>
+                            <td>{filteredData.id}</td>
+                            <td>{filteredData.piece}</td>
+                            <td>{filteredData.age}</td>
+                        </tr>
+
+                    )}
+                    </tbody>
+                </Table>
+            )}
+        </>
+    );
 }
 
 export default MyTable;
