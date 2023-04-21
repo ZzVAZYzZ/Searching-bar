@@ -18,7 +18,7 @@ function SearchingBar(){
         <>
             <MyInput />
             <MyButton />
-            <MyTable myData = {data}/>
+            <MyTable data = {data.data}/>
         </>
         
     )

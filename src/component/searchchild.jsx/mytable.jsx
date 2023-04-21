@@ -1,7 +1,9 @@
 import { Table } from 'react-bootstrap';
 import React,{ useState , useEffect , useRef , useLayoutEffect} from 'react';
 
-function MyTable({myData}){
+function MyTable(props){
+    const {data} = props;
+    console.log(data)
     const yData = [
         {
             no: '1',
