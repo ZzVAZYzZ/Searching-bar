@@ -1,33 +1,40 @@
 import { Table } from 'react-bootstrap';
-import React,{ useState , useEffect , useRef , useLayoutEffect, useCallback, useContext} from 'react';
+import React, { useState , useEffect , useRef , useLayoutEffect, useMemo, useCallback, useContext} from 'react';
 import { DataSearch } from '../searchbar';
+import _ from 'lodash';
 
 function MyTable({data}) {
     const [filteredData,setFilteredData] = useState([]);
     const [prevDataSearch, setPrevDataSearch] = useState("");
     const dataSearch = useContext(DataSearch);
 
-    useEffect(() => {
+    const filteredItems = useMemo(() => {
+        if (Array.isArray(data) && dataSearch !== '') {
+            return _.filter(data, item => _.values(item).join(' ').toLowerCase().includes(dataSearch.toLowerCase()));
+        }
+        return [];
+    }, [data, dataSearch]);
+
+    const handleFilterData = useCallback(() => {
         if (prevDataSearch !== "" && dataSearch === "") {
-          setFilteredData({});
+            setFilteredData(data);
+        } else {
+            setFilteredData(filteredItems);
         }
         setPrevDataSearch(dataSearch);
-    }, [dataSearch]);
+    }, [prevDataSearch, dataSearch, data, filteredItems]);
 
-    useEffect(()=>{
-        if (Array.isArray(data) && dataSearch !== ''){
-            const filteredItem = data.filter((item) => {
-                const values = Object.values(item).join(" ").toLowerCase();
-                return values.includes(dataSearch.toLowerCase());
-              });
-            setFilteredData(filteredItem || []);
-        }else if(Array.isArray(data)){
-            setFilteredData([]);
+    useEffect(() => {
+        if (dataSearch === "") {
+            setFilteredData(data);
+        } else {
+            handleFilterData();
         }
-    },[data,dataSearch])
+    }, [handleFilterData, dataSearch, data]);
+
     return (
         <>
-            {Array.isArray(data) && data.length > 0 &&(
+            {Array.isArray(data) && data.length > 0 && (
                 <Table striped bordered hover border="1px solid #333">
                     <thead>
                         <tr>
@@ -40,33 +47,16 @@ function MyTable({data}) {
                         </tr>
                     </thead>
                     <tbody>
-                    {dataSearch === '' ? (
-                    // Nếu không có giá trị tìm kiếm, hiển thị toàn bộ dữ liệu
-                        data.map((item) => (
-                            <tr key={item.no}>
-                                <td>{item.no}</td>
-                                <td>{item.name}</td>
-                                <td>{item.zoo}</td>
-                                <td>{item.id}</td>
-                                <td>{item.piece}</td>
-                                <td>{item.age}</td>
+                    {(dataSearch === '' ? data : filteredData).map((item) => (
+                            <tr key={item._No}>
+                                <td>{item._No}</td>
+                                <td>{item._Name}</td>
+                                <td>{item._Zoo}</td>
+                                <td>{item._Id}</td>
+                                <td>{item._Piece}</td>
+                                <td>{item._Age}</td>
                             </tr>
-                        ))
-                    ) : (
-                // Nếu có giá trị tìm kiếm, hiển thị các kết quả phù hợp
-
-                    filteredData.map((item) => (
-                        <tr key={item.no}>
-                            <td>{item.no}</td>
-                            <td>{item.name}</td>
-                            <td>{item.zoo}</td>
-                            <td>{item.id}</td>
-                            <td>{item.piece}</td>
-                            <td>{item.age}</td>
-                        </tr>
-                    ))
-
-                    )}
+                    ))}
                     </tbody>
                 </Table>
             )}

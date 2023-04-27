@@ -1,1 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+.border-black {
+    border-color: black;
+  }
+  
+  .table {
+    @apply border-collapse table-auto;
+  }
+  
+  .table th {
+    @apply bg-gray-100 font-bold text-gray-700 uppercase py-2 px-4;
+  }
+  
+  .table td {
+    @apply border border-gray-300 py-2 px-4;
+  }
