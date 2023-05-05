@@ -1,165 +1,163 @@
-{
-  "data" :[
-    {
-      "_No" : 1,
-      "_Name" : "Jack",
-      "_Zoo" : "NEW YORK",
-      "_Id" : "ny01a",
-      "_Piece": "Elephant",
-      "_Age": "12 years"
-    },
-    {
-      "_No" : 2,
-      "_Name" : "Mie",
-      "_Zoo" : "HA NOI",
-      "_Id" : "hn03a",
-      "_Piece": "Tiger",
-      "_Age": "5 years "
-    },
-    {
-      "_No" : 3,
-      "_Name" : "Tiny",
-      "_Zoo" : "NEW YORK",
-      "_Id" : "ny06b",
+[
+  {
+    "_No" : 1,
+    "_Name" : "Jack",
+    "_Zoo" : "NEW YORK",
+    "_Id" : "ny01a",
+    "_Piece": "Elephant",
+    "_Age": "12 years"
+  },
+  {
+     "_No" : 2,
+    "_Name" : "Mie",
+    "_Zoo" : "HA NOI",
+    "_Id" : "hn03a",
+    "_Piece": "Tiger",
+    "_Age": "5 years "
+  },
+  {
+    "_No" : 3,
+    "_Name" : "Tiny",
+    "_Zoo" : "NEW YORK",
+    "_Id" : "ny06b",
       "_Piece": "Panda",
-      "_Age": "3 years"
-    },
-    {
-      "_No" : 4,
-      "_Name" : "Randy",
-      "_Zoo" : "BANGKOK",
-      "_Id" : "bk03c",
-      "_Piece": "Monkey",
-      "_Age": "2 months"
-    },
-    {
-      "_No" : 5,
-      "_Name" : "Neko",
-      "_Zoo" : "TOKYO",
-      "_Id" : "tk02a",
-      "_Piece": "Cat",
-      "_Age": "1 year"
-    },
-    {
-      "_No" : 6,
-      "_Name" : "Mimi",
-      "_Zoo" : "SHANGHAI",
-      "_Id" : "sh02d",
-      "_Piece": "Mouse",
-      "_Age": "1 month"
-    },
-    {
-      "_No" : 7,
-      "_Name" : "Jun",
-      "_Zoo" : "KOERA",
-      "_Id" : "kr32b",
-      "_Piece": "Rhino",
-      "_Age": "4 years"
-    },
-    {
-      "_No" : 8,
-      "_Name" : "Inu",
-      "_Zoo" : "TOKYO",
-      "_Id" : "tk01a",
-      "_Piece": "Dog",
-      "_Age": "3 months"
-    },
-    {
-      "_No" : 9,
-      "_Name" : "Lulu",
-      "_Zoo" : "HA NOI",
-      "_Id" : "hn21d",
-      "_Piece": "Dog",
-      "_Age": "4 months"
-    },
-    {
-      "_No" : 10,
-      "_Name" : "Inu",
-      "_Zoo" : "SHANGHAI",
-      "_Id" : "sh01d",
-      "_Piece": "Dog",
-      "_Age": "1 year"
-    },
-    {
-      "_No" : 11,
-      "_Name" : "Inu Yasa",
-      "_Zoo" : "SHANGHAI",
-      "_Id" : "sh04d",
-      "_Piece": "Dog",
-      "_Age": "10 years"
-    },
-    {
-      "_No" : 12,
-      "_Name" : "Inu Baka",
-      "_Zoo" : "TOKYO",
-      "_Id" : "tk07c",
-      "_Piece": "Dog",
-      "_Age": "2 years"
-    },
-    {
-      "_No" : 13,
-      "_Name" : "Nui Meka",
-      "_Zoo" : "BANGKOK",
-      "_Id" : "bk01a",
-      "_Piece": "Mouse",
-      "_Age": "4 months 3 days"
-    },
-    {
-      "_No" : 14,
-      "_Name" : "Meka Nui",
-      "_Zoo" : "NEW YORK",
-      "_Id" : "ny02a",
-      "_Piece": "Bird",
-      "_Age": "3 months"
-    },
-    {
-      "_No" : 15,
-      "_Name" : "Totem",
-      "_Zoo" : "KOREA",
-      "_Id" : "kr01b",
-      "_Piece": "Monkey",
-      "_Age": "1 year 2 months"
-    },
-    {
-      "_No" : 16,
-      "_Name" : "Metto",
-      "_Zoo" : "TOKYO",
-      "_Id" : "tk05a",
-      "_Piece": "Elephant",
-      "_Age": "2 days"
-    },
-    {
-      "_No" : 17,
-      "_Name" : "Tomto",
-      "_Zoo" : "BANGKOK",
-      "_Id" : "bk03d",
-      "_Piece": "Tiger",
-      "_Age": "3 months"
-    },
-    {
-      "_No" : 18,
-      "_Name" : "Totom",
-      "_Zoo" : "HA NOI",
-      "_Id" : "hn01b",
-      "_Piece": "Turtle",
-      "_Age": "1 year"
-    },
-    {
-      "_No" : 19,
-      "_Name" : "Nyako",
-      "_Zoo" : "TOKYO",
-      "_Id" : "tk03b",
-      "_Piece": "Cat",
-      "_Age": "2 years"
-    },
-    {
-      "_No" : 20,
-      "_Name" : "Shanghaichi",
-      "_Zoo" : "HA NOI",
-      "_Id" : "hn03c",
-      "_Piece": "Dog",
-      "_Age": "5 years"
-    }
+    "_Age": "3 years"
+  },
+  {
+    "_No" : 4,
+    "_Name" : "Randy",
+    "_Zoo" : "BANGKOK",
+    "_Id" : "bk03c",
+    "_Piece": "Monkey",
+    "_Age": "2 months"
+  },
+  {
+    "_No" : 5,
+    "_Name" : "Neko",
+    "_Zoo" : "TOKYO",
+    "_Id" : "tk02a",
+    "_Piece": "Cat",
+    "_Age": "1 year"
+  },
+  {
+    "_No" : 6,
+    "_Name" : "Mimi",
+    "_Zoo" : "SHANGHAI",
+    "_Id" : "sh02d",
+    "_Piece": "Mouse",
+    "_Age": "1 month"
+  },
+  {
+    "_No" : 7,
+    "_Name" : "Jun",
+    "_Zoo" : "KOERA",
+    "_Id" : "kr32b",
+    "_Piece": "Rhino",
+    "_Age": "4 years"
+  },
+  {
+    "_No" : 8,
+    "_Name" : "Inu",
+    "_Zoo" : "TOKYO",
+    "_Id" : "tk01a",
+    "_Piece": "Dog",
+    "_Age": "3 months"
+  },
+  {
+    "_No" : 9,
+    "_Name" : "Lulu",
+    "_Zoo" : "HA NOI",
+    "_Id" : "hn21d",
+    "_Piece": "Dog",
+    "_Age": "4 months"
+  },
+  {
+    "_No" : 10,
+    "_Name" : "Inu",
+    "_Zoo" : "SHANGHAI",
+    "_Id" : "sh01d",
+    "_Piece": "Dog",
+    "_Age": "1 year"
+  },
+  {
+    "_No" : 11,
+    "_Name" : "Inu Yasa",
+    "_Zoo" : "SHANGHAI",
+    "_Id" : "sh04d",
+    "_Piece": "Dog",
+    "_Age": "10 years"
+  },
+  {
+    "_No" : 12,
+    "_Name" : "Inu Baka",
+    "_Zoo" : "TOKYO",
+    "_Id" : "tk07c",
+    "_Piece": "Dog",
+    "_Age": "2 years"
+  },
+  {
+    "_No" : 13,
+    "_Name" : "Nui Meka",
+    "_Zoo" : "BANGKOK",
+    "_Id" : "bk01a",
+    "_Piece": "Mouse",
+    "_Age": "4 months 3 days"
+  },
+  {
+    "_No" : 14,
+    "_Name" : "Meka Nui",
+    "_Zoo" : "NEW YORK",
+    "_Id" : "ny02a",
+    "_Piece": "Bird",
+    "_Age": "3 months"
+  },
+  {
+    "_No" : 15,
+    "_Name" : "Totem",
+    "_Zoo" : "KOREA",
+    "_Id" : "kr01b",
+    "_Piece": "Monkey",
+    "_Age": "1 year 2 months"
+  },
+  {
+    "_No" : 16,
+    "_Name" : "Metto",
+    "_Zoo" : "TOKYO",
+    "_Id" : "tk05a",
+    "_Piece": "Elephant",
+    "_Age": "2 days"
+  },
+  {
+    "_No" : 17,
+    "_Name" : "Tomto",
+    "_Zoo" : "BANGKOK",
+    "_Id" : "bk03d",
+    "_Piece": "Tiger",
+    "_Age": "3 months"
+  },
+  {
+    "_No" : 18,
+    "_Name" : "Totom",
+    "_Zoo" : "HA NOI",
+    "_Id" : "hn01b",
+    "_Piece": "Turtle",
+    "_Age": "1 year"
+  },
+  {
+    "_No" : 19,
+    "_Name" : "Nyako",
+    "_Zoo" : "TOKYO",
+    "_Id" : "tk03b",
+    "_Piece": "Cat",
+    "_Age": "2 years"
+  },
+  {
+    "_No" : 20,
+    "_Name" : "Shanghaichi",
+    "_Zoo" : "HA NOI",
+    "_Id" : "hn03c",
+    "_Piece": "Dog",
+    "_Age": "5 years"
+  }
     
-  ]
-}
+]

@@ -2,9 +2,15 @@ import React , {useState,useEffect,createContext} from "react";
 import MyInput from "./searchchild.jsx/myinput";
 import MyTable from "./searchchild.jsx/mytable";
 import axios from 'axios';
-
-
-
+/////////
+// const express = require("express")
+// const app = express()
+// const cors = require("cors")
+// app.use(cors({
+//     origin: 'http://127.0.0.1:8000',
+//     credentials:true,
+// }))
+/////////
 export const DataSearch = createContext();
 
 function SearchingBar(){
@@ -13,12 +19,12 @@ function SearchingBar(){
     const [dataSearch,setDataSearch] = useState('');
     
     useEffect(()=>{
-        axios.get('https://raw.githubusercontent.com/ZzVAZYzZ/Searching-bar/main/src/mydata.json')
-        // axios.get('/api/users')
+        // axios.get('https://raw.githubusercontent.com/ZzVAZYzZ/Searching-bar/main/src/mydata.json')
+        axios.get('http://localhost:8000/api/test')
         .then(response => setData(response.data))
         .catch(error => console.error(error))
     },[])
-    
+    console.log(data);
     function handleClick(){
         setDataSearch(input);
     }
@@ -40,7 +46,7 @@ function SearchingBar(){
                     
                     <MyTable
                         
-                        data={data.data}
+                        data={data}
                         dataSearch={dataSearch}
                     />
                 </div>
