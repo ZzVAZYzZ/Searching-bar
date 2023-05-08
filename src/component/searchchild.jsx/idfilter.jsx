@@ -1,11 +1,11 @@
 import React , {useState,useEffect} from "react";
 
-function MyInput({dataSearch,placeHolder}){
+function MyIdInput({dataSearch,placeHolder}){
     const [input,setInput] = useState('');
 
     function handleChange(e){
         const newSelect = e.target.value;
-        setInput(newSelect);
+        
         dataSearch(newSelect);
     }
     return(
@@ -18,4 +18,4 @@ function MyInput({dataSearch,placeHolder}){
     )
 }
 
-export default MyInput;
+export default MyIdInput;
